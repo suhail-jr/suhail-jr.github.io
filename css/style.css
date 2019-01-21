@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 body{
-    margin: 0;
-    padding: 0;
-    max-height: 100vh;
-   max-width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+   min-width: 100vw;
+ 
 
 }
 
@@ -11,16 +13,26 @@ body{
 #particles-js
 {
     
-    max-height: 110vh;
-    max-width: 100vw; 
-    background:#f00;
+  min-width: 100%;
+  min-height: 100%;
+ background-size: cover;
+ background-repeat: no-repeat;
+ position: absolute;
+ background:#f00;
 }
+canvas{
+  min-width: 100vw;
+  min-height: 100vh;
+   display: block;
+    vertical-align: bottom;
+   }
+
 
 nav {
     
-    padding-top: 0%;
-    position: absolute;
-    top: 0px; left:37vw;
+     
+    position: fixed;
+    top: 2vh; left:45vw;
     max-width: 100vw;
    
     /* The mask-image gives us some extra fading. It is not necessary but without this, you can't face out the box-shadows. This clips our menu */
@@ -32,17 +44,18 @@ nav {
   
   nav ul {
     text-align: right;
-   
-    width: 100%;
+   height: 0vh;
+    width: auto;
  
   }
   
   nav ul li {
-    display: inline-block;
+    display:inline-flex;
   }
   
   nav ul li a {
-    padding: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
     font-family: 'Montserrat', sans-serif;
     color: rgba(255, 255, 255, 1);
    
@@ -53,17 +66,65 @@ nav {
   .img {
     padding-top:3%;
     padding-left: 5%;
-    position: absolute;
+    position: fixed;
     float: left;
     width: 10%;
     height: auto;
 
   }  
- #copyright{
 
-    font-family: 'Montserrat', sans-serif;
-    position: absolute;
-    top: 150%; bottom:50% ;
-    color: bisque;
 
+ 
+ .cpy h1
+ {
+ color: white;
+ opacity:0.5 ;
+ font-family: 'Montserrat', sans-serif;
+ position: absolute;
+ float: right; 
+
+left: 45%;
+bottom: 1%;
+ font-size: 10px;
+ 
  }
+
+ .footer {
+  position: fixed;
+  left: 0;
+  bottom: -2%;
+  width: 100vw;
+  background-color:rgba(red,0,0, 0.5);
+  opacity: 1;
+  color: white;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+
+.footer h5{
+  opacity: 0.8;
+
+}
+
+@media only screen and (max-width: 414px) {
+ 
+body{
+  min-width:100vw;
+  min-height:100vh;
+  background:#f00;
+  }
+
+  #particles-js{
+
+    min-width: 100%;
+    min-height: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: absolute;
+
+   
+    
+  }
+}
