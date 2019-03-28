@@ -86,6 +86,7 @@ nav {
   min-height: 52%;
   background-color: rgb(235, 235, 235);
   position: absolute;
+  align-content: center;
   top: 40%;
   opacity: 1;
   left: 42%;
