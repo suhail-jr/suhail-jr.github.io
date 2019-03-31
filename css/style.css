@@ -4,16 +4,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 @import "compass";
+
+
 body{
   
  transition: background-color 4s cubic-bezier(1, 1, 1, 1);
   transition-delay:0s;
-  margin: 0px;
-  padding: 0px;
-  max-height: 100vh;
-   min-width: 100vw;
-
-
+ min-width: 100%;
+min-height: 100%;
 
 }
 
@@ -53,7 +51,7 @@ canvas{
     display: inline-block;
     font-size: 22px;
     color: #fff;
-    padding: 10px 10px 10px 10px;
+   
   }
   
   .nav > .nav-btn {
@@ -179,7 +177,12 @@ bottom: 1%;
 }
  
 @media only screen and (max-width: 800px) {
-   
+  body{
+    max-width:80vw;
+    max-height:100vh;
+    overflow: hidden;
+  
+    }
   .panel{
   
     min-width: 18%;
@@ -195,16 +198,13 @@ bottom: 1%;
   }
 
     
-body{
-  min-width:100vw;
-  max-height:100vh;
 
-  }
   .nav {
     height: 50px;
     width: 100%;
   
     position: relative;
+    margin-left: 0%;
   
   }
   
@@ -213,14 +213,6 @@ body{
     position: absolute;
     right: 0px;
     top: 0px;
-  }
-    
-  .nav > .nav-links > a {
-    display: inline-block;
-    padding: 13px 10px 13px 10px;
-    text-decoration: none;
-    color: #efefef;
- 
   }
   
   .nav > .nav-btn > label {
